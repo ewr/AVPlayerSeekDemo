@@ -104,16 +104,14 @@ class ViewController: UIViewController {
         let curTime = self._player.currentItem!.currentTime()
         let targetTime = CMTimeAdd(curTime,CMTimeMakeWithSeconds(offsetSecs, 1))
 
+        //self._player.seekToDate(targetDate!) {(finished) in
         self._player.seekToTime(targetTime) {(finished) in
-            print("Seek to time completed. Landed at \(self._player.currentItem!.currentDate())")
+            print("Seek completed. Landed at \(self._player.currentItem!.currentDate())")
             
             if self._player.rate != 1.0 && self.autoPlay.on {
                 self._player.play()
             }
         }
-//        self._player.seekToDate(targetDate!) {(finished) in
-//            print("Seek completed. Landed at \(self._player.currentItem!.currentDate())")
-//        }
     }
     
     //----------
