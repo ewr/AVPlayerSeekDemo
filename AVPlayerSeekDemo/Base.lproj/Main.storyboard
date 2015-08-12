@@ -17,15 +17,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nla-OX-17c">
-                                <rect key="frame" x="263" y="348" width="75" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nla-OX-17c">
+                                <rect key="frame" x="264" y="288" width="75" height="30"/>
                                 <state key="normal" title="Play/Pause"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playhead Position" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOD-vj-VoC">
-                                <rect key="frame" x="232" y="115" width="136" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playhead Position" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOD-vj-VoC">
+                                <rect key="frame" x="199" y="115" width="202" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="4Og-QM-SqC"/>
-                                    <constraint firstAttribute="width" constant="136" id="jyg-xV-3Ly"/>
+                                    <constraint firstAttribute="width" constant="202" id="jyg-xV-3Ly"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -59,35 +59,50 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2UF-g3-Pie">
-                                <rect key="frame" x="258" y="459" width="88" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2UF-g3-Pie">
+                                <rect key="frame" x="259" y="399" width="88" height="30"/>
                                 <state key="normal" title="Jump to Live"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuF-Ft-Ha3">
-                                <rect key="frame" x="258" y="414" width="85" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuF-Ft-Ha3">
+                                <rect key="frame" x="259" y="354" width="85" height="30"/>
                                 <state key="normal" title="Back 30 Min"/>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Et-a4-HzE">
+                                <rect key="frame" x="276" y="523" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Auto-Play After Jump:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tgd-fz-sAT">
+                                <rect key="frame" x="216" y="494" width="169" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="HTh-Ro-Z8p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2UF-g3-Pie" firstAttribute="leading" secondItem="zuF-Ft-Ha3" secondAttribute="leading" id="5cd-eY-44n"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2UF-g3-Pie" secondAttribute="bottom" constant="111" id="Brr-Ad-qbA"/>
                             <constraint firstItem="2UF-g3-Pie" firstAttribute="top" secondItem="zuF-Ft-Ha3" secondAttribute="bottom" constant="15" id="G4t-ZI-bGy"/>
                             <constraint firstItem="XOD-vj-VoC" firstAttribute="centerX" secondItem="iUk-9z-fga" secondAttribute="centerX" id="KeF-Jf-rzQ"/>
                             <constraint firstItem="zuF-Ft-Ha3" firstAttribute="top" secondItem="nla-OX-17c" secondAttribute="bottom" constant="36" id="L86-LQ-h7C"/>
                             <constraint firstItem="0dL-8A-uqd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="2.5" id="N5T-SY-DLa"/>
                             <constraint firstItem="iUk-9z-fga" firstAttribute="top" secondItem="0dL-8A-uqd" secondAttribute="bottom" constant="8" id="Uwe-si-YZQ"/>
                             <constraint firstItem="LOc-4E-mmm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dLk-9S-X3t"/>
-                            <constraint firstItem="zuF-Ft-Ha3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fgn-j2-Ntw"/>
+                            <constraint firstItem="7Et-a4-HzE" firstAttribute="centerX" secondItem="Tgd-fz-sAT" secondAttribute="centerX" id="e1b-XZ-flB"/>
+                            <constraint firstItem="Tgd-fz-sAT" firstAttribute="top" secondItem="2UF-g3-Pie" secondAttribute="bottom" constant="65" id="fWK-Qv-8DF"/>
+                            <constraint firstItem="zuF-Ft-Ha3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="1.5" id="fgn-j2-Ntw"/>
                             <constraint firstItem="0dL-8A-uqd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="51" id="gQy-Be-PDV"/>
+                            <constraint firstItem="Tgd-fz-sAT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hRE-Bk-VxK"/>
                             <constraint firstItem="0dL-8A-uqd" firstAttribute="top" secondItem="XOD-vj-VoC" secondAttribute="bottom" constant="8" symbolic="YES" id="jZ2-Oe-12v"/>
                             <constraint firstItem="XOD-vj-VoC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="95" id="jwr-V6-ZWq"/>
                             <constraint firstItem="LOc-4E-mmm" firstAttribute="top" secondItem="iUk-9z-fga" secondAttribute="bottom" constant="8" symbolic="YES" id="k9I-VB-Zeq"/>
-                            <constraint firstItem="iUk-9z-fga" firstAttribute="centerX" secondItem="nla-OX-17c" secondAttribute="centerX" id="mmH-N2-2Sc"/>
+                            <constraint firstItem="iUk-9z-fga" firstAttribute="centerX" secondItem="nla-OX-17c" secondAttribute="centerX" constant="-1" id="mmH-N2-2Sc"/>
                             <constraint firstItem="zuF-Ft-Ha3" firstAttribute="centerX" secondItem="nla-OX-17c" secondAttribute="centerX" id="vPz-Fo-7dr"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="autoPlay" destination="7Et-a4-HzE" id="9uH-ZR-6WT"/>
                         <outlet property="back30" destination="zuF-Ft-Ha3" id="JLl-KF-sGj"/>
                         <outlet property="jumpLive" destination="2UF-g3-Pie" id="DNP-2z-IFr"/>
                         <outlet property="lastTarget" destination="LOc-4E-mmm" id="Usd-vL-uvQ"/>

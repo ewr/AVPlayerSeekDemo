@@ -13,6 +13,7 @@
 		071FC1A71B7AA55000DE0BCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 071FC1A61B7AA55000DE0BCE /* Assets.xcassets */; };
 		071FC1AA1B7AA55000DE0BCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071FC1A81B7AA55000DE0BCE /* LaunchScreen.storyboard */; };
 		071FC1B21B7AA56700DE0BCE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071FC1B11B7AA56700DE0BCE /* AVFoundation.framework */; };
+		071FC1B41B7B6E6E00DE0BCE /* AVObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071FC1B31B7B6E6E00DE0BCE /* AVObserver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		071FC1A91B7AA55000DE0BCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		071FC1AB1B7AA55000DE0BCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		071FC1B11B7AA56700DE0BCE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		071FC1B31B7B6E6E00DE0BCE /* AVObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVObserver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				071FC1A61B7AA55000DE0BCE /* Assets.xcassets */,
 				071FC1A81B7AA55000DE0BCE /* LaunchScreen.storyboard */,
 				071FC1AB1B7AA55000DE0BCE /* Info.plist */,
+				071FC1B31B7B6E6E00DE0BCE /* AVObserver.swift */,
 			);
 			path = AVPlayerSeekDemo;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			files = (
 				071FC1A21B7AA55000DE0BCE /* ViewController.swift in Sources */,
 				071FC1A01B7AA55000DE0BCE /* AppDelegate.swift in Sources */,
+				071FC1B41B7B6E6E00DE0BCE /* AVObserver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

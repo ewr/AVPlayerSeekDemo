@@ -17,13 +17,44 @@ class ViewController: UIViewController {
     @IBOutlet weak var back30: UIButton!
     @IBOutlet weak var jumpLive: UIButton!
     
+    @IBOutlet weak var autoPlay: UISwitch!
+    
     let _dateF = NSDateFormatter()
     
     let _player:AVPlayer = AVPlayer(URL: NSURL(string:"http://streammachine-test.scprdev.org:8020/sg/test.m3u8")!)
+    var _observer:AVObserver?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // Add our player observer
+        self._observer = AVObserver(player: self._player) { (status,msg,object) in
+            switch status {
+            case .PlayerFailed:
+                print("Player failed. We don't have logic to recover from this.")
+            case .ItemFailed:
+                print("Item failed. We don't have logic to recover from this.")
+            case .Stalled:
+                print("Playback stalled at \(self._player.currentItem!.currentDate())")
+            case .AccessLog:
+                print("New Access log")
+            case .ErrorLog:
+                print("New Error log")
+            case .Playing:
+                print("Status: Playing")
+            case .Paused:
+                print("Status: Paused")
+            case .LikelyToKeepUp:
+                print("playback should keep up")
+            case .UnlikelyToKeepUp:
+                print("playback unlikely to keep up")
+            case .TimeJump:
+                print("Player reports that time jumped.")
+            default:
+                true
+            }
+        }
         
         self.playPause.addTarget(self, action: "playPauseTapped:", forControlEvents: UIControlEvents.TouchUpInside)
         self.back30.addTarget(self, action: "backTapped:", forControlEvents: UIControlEvents.TouchUpInside)
@@ -75,6 +106,10 @@ class ViewController: UIViewController {
 
         self._player.seekToTime(targetTime) {(finished) in
             print("Seek to time completed. Landed at \(self._player.currentItem!.currentDate())")
+            
+            if self._player.rate != 1.0 && self.autoPlay.on {
+                self._player.play()
+            }
         }
 //        self._player.seekToDate(targetDate!) {(finished) in
 //            print("Seek completed. Landed at \(self._player.currentItem!.currentDate())")
